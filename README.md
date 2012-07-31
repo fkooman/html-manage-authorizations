@@ -1,7 +1,7 @@
 # OAuth Authorizations
 
 If you want to use the JS management interface you need to modify both 
-`authorizeEndpoint` and `apiEndpoint` in `manage.js`:
+`authorizeEndpoint` and `apiEndpoint` in `js/manage.js`:
 
     var authorizeEndpoint = 'http://localhost/php-oauth/authorize.php';
     var apiEndpoint = 'http://localhost/php-oauth/api.php';

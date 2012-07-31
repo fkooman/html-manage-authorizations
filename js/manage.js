@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var apiClientId = 'authorization_manager';
-    var redirectUri = "http://localhost/html-manage-oauth/index.html";
+    var redirectUri = "http://localhost/html-manage-authorizations/index.html";
 
     var apiScopes = ["authorizations"];
 
