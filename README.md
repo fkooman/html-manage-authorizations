@@ -43,10 +43,13 @@ information will be relevant:
     <td>Secret</td><td></td>
   </tr>
   <tr>
-    <td>Name</td>List and revoke authorized applications</td>
+    <td>Name</td><td>List and revoke authorized applications</td>
   </tr>
   <tr>
     <td>Description</td>This application lists the applications and their permissions you authorized to access resources on your behalf and allows you to revoke these permissions.</td>
+  </tr>
+  <tr>
+    <td>Application Type</td><td>User Agent Based Applications</td>
   </tr>
 </table>
 
