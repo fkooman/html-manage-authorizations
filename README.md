@@ -29,4 +29,25 @@ To for example:
     var authorizeEndpoint = 'https://www.example.org/php-oauth/authorize.php';
     var apiEndpoint = 'https://www.example.org/php-oauth/api.php';
 
+Also, make sure that this client is registered in your OAuth server. The following
+information will be relevant:
+
+<table>
+  <tr>
+    <td>Client Identifier</td><td>manage_authorizations</td>
+  </tr>
+  <tr>
+    <td>Redirect URI</td><td>https://www.example.org/html-manage-authorizations/index.html</td>
+  </tr>
+  <tr>
+    <td>Secret</td><td></td>
+  </tr>
+  <tr>
+    <td>Name</td>List and revoke authorized applications</td>
+  </tr>
+  <tr>
+    <td>Description</td>This application lists the applications and their permissions you authorized to access resources on your behalf and allows you to revoke these permissions.</td>
+  </tr>
+</table>
+
 That should be all!
