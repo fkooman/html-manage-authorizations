@@ -1,68 +1,57 @@
 $(document).ready(function () {
     var apiClientId = 'authorization_manager';
-    var redirectUri = "http://localhost/html-manage-authorizations/index.html";
+    var apiScope = ["authorizations"];
 
-    var apiScopes = ["authorizations"];
-
-    var apiEndpoint = 'http://localhost/php-oauth/api.php';
     var authorizeEndpoint = 'http://localhost/php-oauth/authorize.php';
+    var apiEndpoint = 'http://localhost/php-oauth/api.php';
 
     jso_configure({
-        "admin": {
+        "authorization_manager": {
             client_id: apiClientId,
-            redirect_uri: redirectUri,
             authorization: authorizeEndpoint
         }
     });
     jso_ensureTokens({
-        "admin": apiScopes
+        "authorization_manager": apiScope
     });
 
-    function renderApprovalList() {
+    function renderAuthorizedApplicationsList() {
         $.oajax({
             url: apiEndpoint + "/authorizations/",
-            jso_provider: "admin",
-            jso_scopes: apiScopes,
+            jso_provider: "authorization_manager",
+            jso_scopes: apiScope,
             jso_allowia: true,
             dataType: 'json',
             success: function (data) {
-                $("#approvalList").html($("#approvalListTemplate").render(data));
-                addApprovalListHandlers();
+                $("#authorizedApplicationsList").html($("#authorizedApplicationsListTemplate").render(data));
+                addAuthorizedApplicationsListHandlers();
             }
         });
     }
 
-    function addApprovalListHandlers() {
-        $("a.deleteApproval").click(function () {
-            if (confirm("Are you sure you want to delete '" + $(this).data('clientName') + "'")) {
-                deleteApproval($(this).data('clientId'));
+    function addAuthorizedApplicationsListHandlers() {
+        $("button.deleteAuthorization").click(function () {
+            if (confirm("Are you sure you want to delete the authorization for '" + $(this).data('clientName') + "'?")) {
+                deleteAuthorization($(this).data('clientId'));
             }
         });
     }
 
-    function deleteApproval(clientId) {
+    function deleteAuthorization(clientId) {
         $.oajax({
             url: apiEndpoint + "/authorizations/" + clientId,
-            jso_provider: "admin",
-            jso_scopes: apiScopes,
+            jso_provider: "authorization_manager",
+            jso_scopes: apiScope,
             jso_allowia: true,
             type: "DELETE",
             success: function (data) {
-                renderApprovalList();
+                renderAuthorizedApplicationsList();
             }
         });
     }
 
-    $("a#approvalsButton").click(function() {
-        $(this).parent().siblings().removeClass("active");
-        $(this).parent().addClass("active");
-        $("#registeredClientsList").hide();
-        $("#approvedClientsList").show();
-        renderApprovalList();
-    });
-
     function initPage() {
-        renderApprovalList();
+        renderAuthorizedApplicationsList();
     }
     initPage();
 });
