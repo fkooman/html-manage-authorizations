@@ -34,13 +34,7 @@ information will be relevant:
 
 <table>
   <tr>
-    <td>Client Identifier</td><td>manage_authorizations</td>
-  </tr>
-  <tr>
-    <td>Redirect URI</td><td>https://www.example.org/html-manage-authorizations/index.html</td>
-  </tr>
-  <tr>
-    <td>Secret</td><td></td>
+    <td>Identifier</td><td>authorization_manager</td>
   </tr>
   <tr>
     <td>Name</td><td>List and revoke authorized applications</td>
@@ -49,7 +43,13 @@ information will be relevant:
     <td>Description</td><td>This application lists the applications and their permissions you authorized to access resources on your behalf and allows you to revoke these permissions.</td>
   </tr>
   <tr>
-    <td>Application Type</td><td>User Agent Based Application</td>
+    <td>Profile</td><td>User-agent-based Application</td>
+  </tr>
+  <tr>
+    <td>Secret</td><td></td>
+  </tr>
+  <tr>
+    <td>Redirect URI</td><td>https://www.example.org/html-manage-authorizations/index.html</td>
   </tr>
 </table>
 
