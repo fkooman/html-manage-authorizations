@@ -47,7 +47,7 @@ information will be relevant:
     <th>Profile</th><td>User-agent-based Application</td>
   </tr>
   <tr>
-    <th>Secret</th>_NONE_<td></td>
+    <th>Secret</th><td>_NONE_<td></td>
   </tr>
   <tr>
     <th>Redirect URI</th><td>https://www.example.org/html-manage-authorizations/index.html</td>
