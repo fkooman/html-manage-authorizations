@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Authorized Applications</title>
+    <meta charset="utf-8">
+    <title>Authorizations</title>
     <script src="ext/js/jquery.js"></script>
     <script src="ext/js/jsrender.js"></script>
     <script src="ext/js/jso.js"></script>
@@ -12,14 +13,14 @@
   <body>
   
     <div id="authorizedApplications">
-        <h1>My Authorized Applications</h1>
+        <h1>Authorizations</h1>
 
         <table id="authorizedApplicationsTable">
-            <tr><th>Application</th><th>Permissions</th><th>Authorization</th></tr>
+            <tr><th>Application</th><th>Permissions</th><th>Actions</th></tr>
         	<tbody id="authorizedApplicationsList"></tbody>
         </table>
 
-        <p><small>Removing the authorization for an application will required the application to request your permissions again next time.</small></p>
+        <p><small>Removing the authorization for an application will required the application to request your permission again next time.</small></p>
     </div>
     
     <script id="authorizedApplicationsListTemplate" type="text/x-jsrender">
