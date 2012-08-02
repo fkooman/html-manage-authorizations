@@ -45,16 +45,16 @@ information will be relevant:
     <th>Identifier</th><td>authorization_manager</td>
   </tr>
   <tr>
-    <th>Name</th><td>List and revoke authorized applications</td>
+    <th>Name</th><td>Manage Authorizations</td>
   </tr>
   <tr>
-    <th>Description</th><td>This application lists the applications and their permissions you authorized to access resources on your behalf and allows you to revoke these permissions.</td>
+    <th>Description</th><td>This application can be used by end users to view and revoke application permissions.</td>
   </tr>
   <tr>
     <th>Profile</th><td>User-agent-based Application</td>
   </tr>
   <tr>
-    <th>Secret</th><td>_NONE_</td>
+    <th>Secret</th><td><em>NONE</em></td>
   </tr>
   <tr>
     <th>Redirect URI</th><td>https://www.example.org/html-manage-authorizations/index.html</td>
