@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Authorizations</title>
     <script src="ext/js/jquery.js"></script>
     <script src="ext/js/jsrender.js"></script>
@@ -12,16 +14,18 @@
 
   <body>
   
-    <div id="authorizedApplications">
-        <h1>Authorizations</h1>
+    <div id="wrapper">
+        <div id="authorizedApplications">
+            <h1>Authorizations</h1>
 
-        <table id="authorizedApplicationsTable">
-            <tr><th>Application</th><th>Permissions</th><th>Actions</th></tr>
-        	<tbody id="authorizedApplicationsList"></tbody>
-        </table>
+            <table id="authorizedApplicationsTable">
+                <tr><th>Application</th><th>Permissions</th><th>Actions</th></tr>
+            	<tbody id="authorizedApplicationsList"></tbody>
+            </table>
 
-        <p><small>Removing the authorization for an application will required the application to request your permission again next time.</small></p>
-    </div>
+            <p><small>Removing the authorization for an application will required the application to request your permission again next time.</small></p>
+        </div>
+    </div> <!-- /wrapper -->
     
     <script id="authorizedApplicationsListTemplate" type="text/x-jsrender">
         <tr>
