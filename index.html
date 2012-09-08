@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Authorizations</title>
-    <script src="ext/js/jquery.js"></script>
-    <script src="ext/js/jsrender.js"></script>
-    <script src="ext/js/jso.js"></script>
-    <script src="js/manage.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/default.css">
-  </head>
-
-  <body>
-  
-    <div id="wrapper">
+    <title>Allowed Applications</title>
+    <!-- Bootstrap -->
+    <link href="ext/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="ext/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
         <div id="authorizedApplications">
-            <h1>Authorizations</h1>
+            <h1>Allowed Applications</h1>
 
-            <table id="authorizedApplicationsTable">
+            <p class="lead">This page allows you to revoke applications that have access to your data.</p>
+
+            <table id="authorizedApplicationsTable" class="table table-striped table-bordered">
+            <thead>
                 <tr><th>Application</th><th>Permissions</th><th>Actions</th></tr>
-            	<tbody id="authorizedApplicationsList"></tbody>
+            </thead>
+            	<tbody id="authorizedApplicationsList">
+
+            </tbody>
             </table>
 
-            <p><small>Removing the authorization for an application will required the application to request your permission again next time.</small></p>
-        </div>
+            <p class="text-info"><span class="label label-info">Info</span> <small>Removing the authorization for an application will required the application to request your permission again next time you use it.</small></p>
+        </div> <!-- /authorizedApplications -->
     </div> <!-- /wrapper -->
     
     <script id="authorizedApplicationsListTemplate" type="text/x-jsrender">
         <tr>
-            <td class="left"><span title="{{:description}}">{{:name}}</span></td>
-            <td class="left">{{:scope}}</td>
-            <td class="right">
-                <button class="deleteAuthorization" data-client-name="{{:name}}" data-client-id="{{:id}}" href="#">Delete</button>
+            <td><span title="{{:description}}">{{:name}}</span></td>
+            <td>{{:scope}}</td>
+            <td>
+                <button class="btn btn-danger btn-small deleteAuthorization " data-client-name="{{:name}}" data-client-id="{{:id}}" href="#"><i class="icon-trash icon-white"></i> Delete</button>
             </td>
         </tr>
     </script>
-  </body>
+
+    <script src="ext/js/jquery.js"></script>
+    <script src="ext/js/jsrender.js"></script>
+    <script src="ext/js/jso.js"></script>
+<!--    <script src="ext/bootstrap/js/bootstrap.min.js"></script> -->
+    <script src="js/manage.js"></script>
+</body>
 </html>
