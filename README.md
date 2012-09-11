@@ -5,6 +5,8 @@
 This application makes it possible to manage authorized applications with the 
 `php-oauth` service through its API.
 
+## Screenshots
+
 ![html-manage-authorizations](https://github.com/fkooman/html-manage-authorizations/raw/master/docs/html-manage-authorizations-screenshot.png)
 
 ## Installation
