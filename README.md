@@ -51,7 +51,7 @@ information will be relevant:
     <th>Name</th><td>Manage OAuth Application Authorizations</td>
   </tr>
   <tr>
-    <th>Description</th><td>This application can be used by end users to view and revoke OAuth application permissions.</td>
+    <th>Description</th><td>Application for end-users to revoke OAuth application consent.</td>
   </tr>
   <tr>
     <th>Profile</th><td>User-agent-based Application</td>
