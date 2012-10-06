@@ -1,9 +1,5 @@
 $(document).ready(function () {
-    var apiClientId = 'html-manage-authorizations';
     var apiScope = ["authorizations"];
-
-    var authorizeEndpoint = 'http://localhost/php-oauth/authorize.php';
-    var apiEndpoint = 'http://localhost/php-oauth/api.php';
 
     jso_configure({
         "html-manage-authorizations": {
