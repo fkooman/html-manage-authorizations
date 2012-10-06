@@ -45,13 +45,13 @@ information will be relevant:
 
 <table>
   <tr>
-    <th>Identifier</th><td>authorization_manager</td>
+    <th>Identifier</th><td>html-manage-authorizations</td>
   </tr>
   <tr>
-    <th>Name</th><td>Manage Authorizations</td>
+    <th>Name</th><td>Manage OAuth Application Authorizations</td>
   </tr>
   <tr>
-    <th>Description</th><td>This application can be used by end users to view and revoke application permissions.</td>
+    <th>Description</th><td>This application can be used by end users to view and revoke OAuth application permissions.</td>
   </tr>
   <tr>
     <th>Profile</th><td>User-agent-based Application</td>
