@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     var apiScope = ["authorizations"];
 
     jso_configure({
@@ -11,7 +12,7 @@ $(document).ready(function () {
         "html-manage-authorizations": apiScope
     });
 
-    function renderAuthorizedApplicationsList() {
+    function renderAuthorizationList() {
         $.oajax({
             url: apiEndpoint + "/authorizations/",
             jso_provider: "html-manage-authorizations",
@@ -19,16 +20,7 @@ $(document).ready(function () {
             jso_allowia: true,
             dataType: 'json',
             success: function (data) {
-                $("#authorizedApplicationsList").html($("#authorizedApplicationsListTemplate").render(data));
-                addAuthorizedApplicationsListHandlers();
-            }
-        });
-    }
-
-    function addAuthorizedApplicationsListHandlers() {
-        $("button.deleteAuthorization").click(function () {
-            if (confirm("Are you sure you want to delete the authorization for '" + $(this).data('clientName') + "'?")) {
-                deleteAuthorization($(this).data('clientId'));
+                $("#authorizationListTable").html($("#authorizationListTemplate").render({"authz": data}));
             }
         });
     }
@@ -41,13 +33,19 @@ $(document).ready(function () {
             jso_allowia: true,
             type: "DELETE",
             success: function (data) {
-                renderAuthorizedApplicationsList();
+                renderAuthorizationList();
             }
         });
     }
 
+    $(document).on('click', '#authorizationListTable button', function() {
+        if (confirm("Are you sure you want to delete the authorization for '" + $(this).data('clientName') + "'?")) {
+            deleteAuthorization($(this).data('clientId'));
+        }
+    });
+
     function initPage() {
-        renderAuthorizedApplicationsList();
+        renderAuthorizationList();
     }
     initPage();
 });
