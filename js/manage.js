@@ -32,7 +32,7 @@ $(document).ready(function () {
             jso_scopes: apiScope,
             jso_allowia: true,
             type: "DELETE",
-            success: function (data) {
+            complete: function (status) {
                 renderAuthorizationList();
             }
         });
