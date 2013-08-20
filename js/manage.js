@@ -20,7 +20,13 @@ $(document).ready(function () {
             jso_allowia: true,
             dataType: 'json',
             success: function (data) {
-                $("#authorizationListTable").html($("#authorizationListTemplate").render({"authz": data}));
+                var authorizationListSource = $("#authorizationList-template").html();
+                var authorizationListTemplate = Handlebars.compile(authorizationListSource);
+                var authorizationList = authorizationListTemplate({
+                    authorizations: data,
+                });
+
+                $("#authorizationListTable").html(authorizationList);
             }
         });
     }
