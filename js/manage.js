@@ -44,7 +44,7 @@ $(document).ready(function () {
         });
     }
 
-    $(document).on('click', '#authorizationListTable button', function() {
+    $(document).on('click', '#authorizationListTable button', function () {
         if (confirm("Are you sure you want to delete the authorization for '" + $(this).data('clientName') + "'?")) {
             deleteAuthorization($(this).data('clientId'));
         }
