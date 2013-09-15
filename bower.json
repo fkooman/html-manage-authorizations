@@ -1,23 +1,8 @@
 {
-    "authors": [
-        "Fran\u00e7ois Kooman <fkooman@tuxed.net>"
-    ],
     "dependencies": {
-        "bootstrap": "~3.0.0",
-        "handlebars": "~1.0.0",
+        "bootstrap": "~3.0.0", 
+        "handlebars": "~1.0.0", 
         "jso": "https://github.com/andreassolberg/jso.git"
-    },
-    "description": "Use the php-oauth API to manage approved applications",
-    "homepage": "https://github.com/fkooman/html-manage-authorizations",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "license": "Apache-2.0",
-    "main": "index.html",
-    "name": "html-manage-authorizations",
-    "version": "0.1.0"
+    }, 
+    "name": "html-manage-authorizations"
 }
