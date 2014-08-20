@@ -1,3 +1,3 @@
-var apiClientId = 'html-manage-authorizations';
-var authorizeEndpoint = 'http://localhost/php-oauth/authorize.php';
-var apiEndpoint = 'http://localhost/php-oauth/api.php';
+var apiClientId = 'http://php-oauth.net/app/authorize';
+var authorizeEndpoint = 'https://localhost/php-oauth-as/authorize.php';
+var apiEndpoint = 'https://localhost/php-oauth-as/api.php';

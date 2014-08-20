@@ -1,21 +1,21 @@
 $(document).ready(function () {
 
-    var apiScope = ["authorizations"];
+    var apiScope = ["http://php-oauth.net/scope/authorize"];
 
     jso_configure({
-        "html-manage-authorizations": {
+        "http://php-oauth.net/app/authorize": {
             client_id: apiClientId,
             authorization: authorizeEndpoint
         }
     });
     jso_ensureTokens({
-        "html-manage-authorizations": apiScope
+        "http://php-oauth.net/app/authorize": apiScope
     });
 
     function renderAuthorizationList() {
         $.oajax({
             url: apiEndpoint + "/authorizations/",
-            jso_provider: "html-manage-authorizations",
+            jso_provider: "http://php-oauth.net/app/authorize",
             jso_scopes: apiScope,
             jso_allowia: true,
             dataType: 'json',
@@ -34,7 +34,7 @@ $(document).ready(function () {
     function deleteAuthorization(clientId) {
         $.oajax({
             url: apiEndpoint + "/authorizations/" + clientId,
-            jso_provider: "html-manage-authorizations",
+            jso_provider: "http://php-oauth.net/app/authorize",
             jso_scopes: apiScope,
             jso_allowia: true,
             type: "DELETE",
