@@ -4,35 +4,34 @@
         <meta charset="utf-8">
         <title>Authorized Applications</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Bootstrap -->
-        <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
     </head>
     <body>
         <script id="authorizationList-template" type="text/x-handlebars-template">
-            <table class="table table-striped table-bordered">
+            <table>
                 <thead>
                     <tr><th>Application</th><th>Permissions</th><th>Actions</th></tr>
                 </thead>
                 <tbody>
                 {{#each authorizations}}
                     <tr>
-                        <td><strong>{{name}}</strong><br><span>{{description}}</span></td>
-                        <td>{{scope}}</td>
-                        <td><button class="btn btn-danger btn-sm" data-client-name="{{name}}" data-client-id="{{id}}"><span class="glyphicon glyphicon-trash"></span> Revoke Permissions</button></td>
+                        <td><strong>{{name}}</strong><small class="description">{{description}}</small></td>
+                        <td><small>{{scope}}</small></td>
+                        <td><button data-client-name="{{name}}" data-client-id="{{id}}">Revoke Permissions</button></td>
                     </tr>
                 {{/each}}
                 </tbody>
             </table>
         </script>
 
-        <div class="container">
+        <div id="container">
             <h1>Authorized Applications</h1>
-            <p class="lead">This page allows you to revoke permission for applications that have access to your data.</p>
+            <p>This page allows you to revoke permission for applications that have access to your data.</p>
 
             <div id="authorizationListTable">
             </div>
 
-            <p class="text-info"><span class="label label-info">Info</span> <small>Removing permissions will require you to authorize the application again next time it wants to access your data.</small></p>
+            <p><small class="warning">Removing permissions will require you to authorize the application again next time it wants to access your data.</small></p>
         </div> <!-- /container -->
 
         <script src="bower_components/jquery/dist/jquery.min.js"></script>

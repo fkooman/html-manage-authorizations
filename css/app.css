@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+}
+div#container {
+  text-align: center;
+  color: #333;
+  background: #fff;
+  margin: 0px auto;
+  width: 75%;
+}
+table {
+    border: 1px solid #333;
+    border-spacing: 0;
+}
+thead {
+    background-color: #0074d9;
+}
+th,td {
+    padding: 10px;
+}
+th {
+    color: #fff;
+}
+.warning {
+    color: #ff851b;
+}
+button {
+    font-family: sans-serif;
+}
+td {
+    text-align: left;
+}
+small.description {
+    display: block;
+}
+
